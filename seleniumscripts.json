@@ -1,0 +1,134 @@
+{
+    "type": "script",
+    "seleniumVersion": "2",
+    "formatVersion": 2,
+    "steps": [
+      {
+        "type": "get",
+        "url": "https://stage.uml.edu/Student-Life/"
+      },
+      {
+        "type": "clickElement",
+        "locator": {
+          "type": "xpath",
+          "value": "//html/body/form/header/div/div[2]/nav/ul/li[4]"     
+           }
+      }
+    ],
+    "data": {
+      "configs": {},
+      "source": "none"
+    },
+    "inputs": [],
+    "timeoutSeconds": 60
+  }
+
+
+
+  //
+
+  {
+    "type": "script",
+    "seleniumVersion": "2",
+    "formatVersion": 2,
+    "steps": [
+      {
+        "type": "get",
+        "url": "https://stage.uml.edu/Student-Life/"
+      },
+      {
+        "type": "clickElement",
+        "locator": {
+          "type": "css selector",
+          "value": "a[href='/myuml/']"     
+           }
+      }
+    ],
+    "data": {
+      "configs": {},
+      "source": "none"
+    },
+    "inputs": [],
+    "timeoutSeconds": 60
+  }
+
+  //art 
+
+  {
+    "type": "script",
+    "seleniumVersion": "2",
+    "formatVersion": 2,
+    "steps": [
+      {
+        "type": "get",
+        "url": "https://www.uml.edu/catalog/"
+      },
+      {
+        "type": "setElementText",
+        "locator": {
+          "type": "css selector",
+          "value": "input[placeholder='Search Catalog...']"     
+           },
+           "text": "art"
+      }
+    ],
+    "data": {
+      "configs": {},
+      "source": "none"
+    },
+    "inputs": [],
+    "timeoutSeconds": 60
+  }
+
+
+
+
+
+  {
+    "type": "script",
+    "seleniumVersion": "2",
+    "formatVersion": 2,
+    "steps": [
+      {
+        "type": "get",
+        "url": "https://www.uml.edu/catalog/"
+      },
+      {
+        "type": "setElementText",
+        "locator": {
+          "type": "xpath",
+          "value": "//html/body/form/div[4]/div/div[3]/nav/div/uml-catalog-sidebar-search/span/div/input"     
+           },
+           "text": "art"
+      },
+      {
+        "type": "submitElement",
+        "locator": {
+          "type": "xpath",
+          "value": "//html/body/form/div[4]/div/div[3]/nav/div/uml-catalog-sidebar-search/span/div/input"     
+           }
+      },
+      {
+          "type": "waitForPageSource",
+          "source": "https://www.uml.edu/catalog/advance-search.aspx?keyword=art&type=keyword"
+      },
+      {
+          "type": "waitForPageSource",
+          "source": "https://www.uml.edu/catalog/advance-search.aspx?keyword=art&type=keyword"
+      },{
+        "type": "waitForText",
+        "locator": {
+          "type": "xpath",
+          "value": "//html/body/form/div[3]/div[4]/div/div/div/h1"     
+           },
+        "text":"Advanced Course Search"
+      }
+
+    ],
+    "data": {
+      "configs": {},
+      "source": "none"
+    },
+    "inputs": [],
+    "timeoutSeconds": 60
+  }
